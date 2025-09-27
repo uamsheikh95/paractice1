@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!--Main Menu-->
+    <menuitem name="Saving"
+                  id="saving_root"/>
+                  <!-- web_icon="tk_freight,static/description/icon.png" -->
+    <!--Dashboard Menu-->
+    <!-- <menuitem name="Dashboard"
+                  id="dasboard_id"
+                  parent="tk_freight.freight_root"
+                  action="action_freight_dashboard"
+                  sequence="-1"/> -->
+
+    <!-- Configuration -->
+    <menuitem name="Configuration"
+                  id="menu_saving_configuration"
+                  parent="saving_root"
+                  sequence="999"/>
+    <menuitem name="Saving Products"
+                  id="menu_saving_product"
+                  parent="menu_saving_configuration"
+                  action="saving_type_action"
+                  sequence="1"/> 
+</odoo>

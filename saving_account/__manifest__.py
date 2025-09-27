@@ -7,8 +7,10 @@
     "website": "www.meisour.com",
     "license": "OPL-1",
     "category": "Accounting",
-    "depends": ["base"],
+    "depends": ["base", "account"],
     "data": [
-        'security/ir.model.access.csv'
+        'security/ir.model.access.csv',
+        'views/saving_type_views.xml',
+        'views/saving_account_menu.xml'
     ],
 }
