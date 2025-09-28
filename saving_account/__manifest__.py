@@ -11,6 +11,8 @@
     "data": [
         'security/ir.model.access.csv',
         'views/saving_type_views.xml',
+        'views/branch_views.xml',
+        'views/partner_views.xml',
         'views/saving_account_menu.xml'
     ],
 }

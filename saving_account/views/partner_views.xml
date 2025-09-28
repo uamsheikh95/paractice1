@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <record id="view_partner_form_inherit" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <field name="vat" position="after">
+                <field name="is_saving_customer" invisible="1"/>
+                <field name="saving_branch_id" options="{'no_create': True}" required="is_saving_customer" invisible="not is_saving_customer"/>
+            </field>
+            <xpath expr="//field[@name='mobile']" position="attributes">
+                <attribute name="required">1</attribute>
+            </xpath>
+        </field>
+    </record>
+    <!-- Actions -->
+    <record model="ir.actions.act_window" id="saving_partner_action">
+        <field name="name">Saving Customers</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,list,form</field>
+        <field name="domain">[('is_saving_customer','=', True)]</field>
+        <field name="context">{'default_is_saving_customer': 1}</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+                    Click to create a new saving customer.
+                </p>
+        </field>
+    </record>
+</odoo>

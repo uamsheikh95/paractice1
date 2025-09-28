@@ -11,6 +11,12 @@
                   action="action_freight_dashboard"
                   sequence="-1"/> -->
 
+    <menuitem name="Customers"
+                  id="menu_saving_customer"
+                  parent="saving_root"
+                  action="saving_partner_action"
+                  sequence="5"/>
+
     <!-- Configuration -->
     <menuitem name="Configuration"
                   id="menu_saving_configuration"
@@ -20,5 +26,10 @@
                   id="menu_saving_product"
                   parent="menu_saving_configuration"
                   action="saving_type_action"
+                  sequence="1"/> 
+    <menuitem name="Branches"
+                  id="menu_saving_branch"
+                  parent="menu_saving_configuration"
+                  action="branch_action"
                   sequence="1"/> 
 </odoo>
