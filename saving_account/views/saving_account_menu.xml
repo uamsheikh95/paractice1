@@ -10,6 +10,28 @@
                   parent="tk_freight.freight_root"
                   action="action_freight_dashboard"
                   sequence="-1"/> -->
+    <menuitem name="Transaction"
+                  id="menu_saving_transaction"
+                  parent="saving_root"
+                  sequence="2"/>
+
+    <menuitem name="Deposits"
+                  id="menu_saving_deposit"
+                  parent="menu_saving_transaction"
+                  action="saving_transaction_deposit_action"
+                  sequence="1"/>
+
+    <menuitem name="Withdrawals"
+                  id="menu_saving_withdrawal"
+                  parent="menu_saving_transaction"
+                  action="saving_transaction_withdrawal_action"
+                  sequence="2"/>
+
+    <menuitem name="Account to Accounts"
+                  id="menu_saving_acc_acc"
+                  parent="menu_saving_transaction"
+                  action="saving_transaction_acc_to_acc_action"
+                  sequence="3"/>
 
     <menuitem name="Customers"
                   id="menu_saving_customer"
